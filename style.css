@@ -58,4 +58,5 @@ main {
     background-color: hsl(246, 100%, 65%);
     color: white;
     border-color: white;
+    cursor: pointer;
 }
