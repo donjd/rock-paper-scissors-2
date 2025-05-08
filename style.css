@@ -15,13 +15,12 @@ main {
     width: 400px;
 }
 
-
-
 header {
     display: flex;
     justify-content: space-between;
     gap: 10px;
     font-size: 1.5rem;
+    margin-bottom: 20px;
 }
 
 header > * {
@@ -44,13 +43,13 @@ header > * {
     justify-content: center;
 }
 
-.option {
+.option.button {
     border: 2px solid black;
     padding: 5px 10px;
     border-radius: 5px;
 }
 
-.options > * {
+.options.button > * {
     margin: 10px;
 }
 
@@ -63,9 +62,16 @@ header > * {
     color: hsl(0, 0%, 55%);
 }
 
-.option:hover {
+.option.button:hover {
     background-color: hsl(246, 100%, 65%);
     color: white;
     border-color: white;
     cursor: pointer;
+}
+
+.menu.button:hover {
+    color: hsl(246, 100%, 65%);
+    border: 1px solid hsl(246, 100%, 65%);
+    border-radius: 5px;
+    padding: 2px 5px;
 }
