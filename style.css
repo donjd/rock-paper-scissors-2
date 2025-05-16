@@ -89,3 +89,7 @@ a {
 a:visited {
     color: black;
 }
+
+.button {
+    user-select: none;
+}

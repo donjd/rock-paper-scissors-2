@@ -23,8 +23,9 @@ function generateUserChoice (e){
     else {
     userChoiceDisplay.textContent = userChoice;
     generateComputerChoice();
-    }
     getScore();
+    }
+    
 }
 
 function generateComputerChoice() {
@@ -46,17 +47,17 @@ function generateComputerChoice() {
 
 function getScore (){
     if (userChoice === computerChoice){
-        alert ("I'ts a tie");
+        console.log("I'ts a tie");
     } else if (
         (userChoice == "rock" && computerChoice == "scissors") ||
         (userChoice == "paper" && computerChoice == "rock") ||
-        (userChoice == "scissors" && computerChoice == "paper") ||
+        (userChoice == "scissors" && computerChoice == "paper")
     ) {
         userScore ++;
     } else {
         computerScore ++;
     }
 
-    userScoreDisplay.textContent == userScore;
-    computerScoreDisplay.textContent == computerScore;
+    userScoreDisplay.textContent = userScore;
+    computerScoreDisplay.textContent = computerScore;
 }
