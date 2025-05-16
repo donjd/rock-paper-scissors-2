@@ -4,9 +4,14 @@ const paper = document.querySelector(".paper");
 const scissors = document.querySelector(".scissors");
 const userChoiceDisplay = document.querySelector("#user-choice");
 const computerChoiceDisplay = document.querySelector("#computer-choice");
+const userScoreDisplay = document.querySelector("#user-score");
+const computerScoreDisplay = document.querySelector("#computer-score");
 
 let userChoice = "";
 let computerChoice = "";
+let userScore = 0;
+let computerScore = 0;
+
 
 options.addEventListener("click", generateUserChoice)
 
@@ -19,6 +24,7 @@ function generateUserChoice (e){
     userChoiceDisplay.textContent = userChoice;
     generateComputerChoice();
     }
+    getScore();
 }
 
 function generateComputerChoice() {
@@ -26,14 +32,31 @@ function generateComputerChoice() {
 
     switch (randomNumber){
         case 1:
-            computerChoiceDisplay.textContent = "rock";
+            computerChoice = "rock";
             break;
         case 2:
-            computerChoiceDisplay.textContent = "paper";
+            computerChoice = "paper";
             break;
         default:
-            computerChoiceDisplay.textContent = "scissors";
+            computerChoice = "scissors";
             break;
     }
+    computerChoiceDisplay.textContent = computerChoice;
+}
 
+function getScore (){
+    if (userChoice === computerChoice){
+        alert ("I'ts a tie");
+    } else if (
+        (userChoice == "rock" && computerChoice == "scissors") ||
+        (userChoice == "paper" && computerChoice == "rock") ||
+        (userChoice == "scissors" && computerChoice == "paper") ||
+    ) {
+        userScore ++;
+    } else {
+        computerScore ++;
+    }
+
+    userScoreDisplay.textContent == userScore;
+    computerScoreDisplay.textContent == computerScore;
 }
